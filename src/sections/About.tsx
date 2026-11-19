@@ -1,0 +1,8 @@
+import { SectionLabel, Photo, Scribble, Asterisk } from '../components/UI';
+export default function About() {
+  return <section id="about" className="section about" aria-labelledby="about-title"><SectionLabel number="02">BEHIND THE WORK</SectionLabel>
+    <div className="about-composition"><h2 id="about-title"><span className="about-first"><span>ABOUT</span></span><span className="about-second">THE ENGINEER<Scribble/></span></h2><Photo name="about" alt="Architectural steel lattice converging into the sky" className="about-photo"/></div>
+    <div className="about-columns"><div data-reveal><span className="meta orange">01 / THE INTRODUCTION</span><h3>Engineering,<br/>with intention.</h3><p>I’m Kevin, a solar PV design engineer based in Chennai. I bring a mechanical engineering foundation and nearly four years of experience in solar PV design, structural validation and technical documentation.</p></div><div data-reveal><span className="meta orange">02 / THE APPROACH</span><h3>Precision is<br/>a practice.</h3><p>My work connects CAD modelling, PV system optimisation and cross-functional coordination — bringing clarity to the details that make rooftop and ground-mounted solar systems work.</p></div><div className="about-specialisms" data-reveal><Asterisk/><span className="meta orange">03 / THE FOCUS</span><p>Solar PV design<br/>Mechanical modelling<br/>Structural validation<br/>Technical documentation</p></div></div>
+    <div className="word-band" aria-hidden="true"><div className="word-band-inner">ENGINEERING <Asterisk/> DESIGN <Asterisk/> PRECISION <Asterisk/> PURPOSE</div></div>
+  </section>;
+}

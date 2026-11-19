@@ -1,0 +1,58 @@
+[
+  {
+    "name": "cover",
+    "author": "Resource Database",
+    "source": "https://unsplash.com/photos/rOgf4YVQj4Q",
+    "original": "https://images.unsplash.com/photo-1793372888272-a8ab079d4834",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "name": "about",
+    "author": "Joel Filipe",
+    "source": "https://unsplash.com/photos/SIyGeJeWAcY",
+    "original": "https://images.unsplash.com/photo-1528212919119-f1093b9be6aa",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "name": "tools",
+    "author": "Declan Sun",
+    "source": "https://unsplash.com/photos/CnWkn7-rAh8",
+    "original": "https://images.unsplash.com/photo-1752751788742-e79cac56ba4f",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "name": "ground",
+    "author": "Daniel Miksha",
+    "source": "https://unsplash.com/photos/PNX3H9jkT4c",
+    "original": "https://images.unsplash.com/photo-1770068511771-7c146210a55b",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "name": "rooftop",
+    "author": "Markus Spiske",
+    "source": "https://unsplash.com/photos/rN9BTsKUc1E",
+    "original": "https://images.unsplash.com/photo-1668097613569-3405bb63262b",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "name": "tracker",
+    "author": "Sebastian Schuster",
+    "source": "https://unsplash.com/photos/EQaY0H9KeWg",
+    "original": "https://images.unsplash.com/photo-1780273035811-d1b63f76bfb9",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "name": "mobile",
+    "author": "Jackery Power Station",
+    "source": "https://unsplash.com/photos/uIz2frN4s8g",
+    "original": "https://images.unsplash.com/photo-1650785603924-160f4fe544bc",
+    "license": "https://unsplash.com/license"
+  },
+  {
+    "name": "battery",
+    "author": "Jackery Power Station",
+    "source": "https://unsplash.com/photos/YWwdljlQfUM",
+    "original": "https://images.unsplash.com/photo-1650785652040-5a2fc88ce902",
+    "license": "https://unsplash.com/license"
+  }
+]

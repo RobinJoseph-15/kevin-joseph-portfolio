@@ -1,0 +1,42 @@
+@layer responsive {
+  :root {
+    --ink: #080808; --paper: #F5F0DC; --orange: #F04412;
+    --surface: var(--ink); --text: var(--paper); --secondary: #c9c5b6;
+    --muted: #aaa79b; --line: #383733; --backdrop: rgb(8 8 8 / .8);
+    color: var(--text); background: var(--surface); color-scheme: dark;
+  }
+  :root[data-theme='light'] {
+    --surface: var(--paper); --text: var(--ink); --secondary: #45433d;
+    --muted: #626056; --line: #c6c1af; --backdrop: rgb(8 8 8 / .5);
+    color-scheme: light;
+  }
+  body, .app, .section, .cover, .header, .editorial-overlay, .menu-overlay, .light-section {
+    background: var(--surface); color: var(--text); color-scheme: inherit;
+  }
+  .light-section { --line: inherit; }
+  .skill-category, .education-list, .education-item { border-color: var(--line); }
+  .editorial-overlay::backdrop { background: var(--backdrop); }
+  .about-columns p { color: var(--secondary); }
+  .photo { background: var(--line); }
+  .project-number { color: var(--paper); text-shadow: 0 1px 15px rgb(8 8 8 / .25); }
+  .gmail-link, .project-arrow { color: var(--ink); }
+  .gmail-link:hover, .project-open:hover .project-arrow { background: var(--text); color: var(--surface); }
+  ::selection { color: var(--ink); }
+  .theme-toggle { width: 40px; height: 40px; flex-shrink: 0; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--text); transition: border-color .2s, color .2s; }
+  .theme-toggle:hover { border-color: var(--orange); color: var(--orange); }
+  .theme-toggle:disabled { cursor: wait; }
+  .overlay-top > .theme-toggle { margin-left: auto; }
+  .overlay-top { justify-content: flex-start; }
+  .theme-curtain { position: fixed; inset: 0; width: 100vw; height: 100dvh; max-width: none; max-height: none; padding: 0; margin: 0; border: 0; z-index: 2147483647; }
+  @media (max-width: 800px) {
+    .header { gap: 10px; }
+    .header > .theme-toggle { width: 38px; height: 38px; }
+    .menu-toggle { padding-left: 0; }
+  }
+}
+/* Snapshot the complete new theme above the old one, without crossfading. */
+::view-transition-group(root) { animation-duration: 0s; }
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+::view-transition-image-pair(root) { isolation: auto; }
+::view-transition-old(root) { z-index: 1; }
+::view-transition-new(root) { z-index: 2; }

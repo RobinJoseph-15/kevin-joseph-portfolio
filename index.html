@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080808" />
+    <script>
+      (() => {
+        let theme;
+        try { theme = localStorage.getItem('kj-theme'); } catch {}
+        if (theme !== 'light' && theme !== 'dark') theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#080808' : '#F5F0DC';
+      })();
+    </script>
+    <style>html{background:#080808;color:#F5F0DC}html[data-theme="light"]{background:#F5F0DC;color:#080808}</style>
+    <meta
+      name="description"
+      content="I. Kevin Joseph — Solar PV Design Engineer in Chennai. Mechanical engineering, solar system design, structural validation and technical documentation."
+    />
+    <meta
+      property="og:title"
+      content="I. Kevin Joseph — Design with purpose"
+    />
+    <meta
+      property="og:description"
+      content="Explore the engineering, experience and renewable-energy focus of I. Kevin Joseph."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>I. Kevin Joseph — Solar PV Design Engineer</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

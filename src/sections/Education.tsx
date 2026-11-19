@@ -1,0 +1,12 @@
+import { Award, BadgeCheck, GraduationCap, CalendarDays, ArrowUpRight } from 'lucide-react';
+import { SectionLabel, Scribble } from '../components/UI';
+import { useOverlay } from '../components/modal/Overlay';
+const education = [
+  { title: 'B.E. Mechanical Engineering', subtitle: 'Loyola-ICAM College of Engineering and Technology', date: '2018 – 2022', label: 'ACADEMIC FOUNDATION', Icon: GraduationCap, description: 'A mechanical engineering foundation for a career in solar PV design, structural validation and technical documentation.' },
+  { title: 'CATIA Professional Certification', subtitle: 'A focused investment in mechanical design.', date: 'JUN 2023 – JAN 2024', label: 'PROFESSIONAL CERTIFICATION', Icon: BadgeCheck, description: 'Professional CATIA certification completed between June 2023 and January 2024, complementing Kevin’s mechanical design toolkit.' },
+  { title: 'Performance Excellence Awards', subtitle: 'Two awards. A commitment to quality.', date: 'TWO AWARDS', label: 'RECOGNITION', Icon: Award, description: 'Two Performance Excellence Awards recognising productivity, quality delivery and workflow optimisation.' },
+];
+export default function Education() {
+  const open = useOverlay();
+  return <section id="education" className="section education light-section" aria-labelledby="education-title"><SectionLabel number="06">EDUCATION & RECOGNITION</SectionLabel><div className="education-heading"><h2 id="education-title" data-heading><span className="line-mask"><span className="line-inner">THE</span></span><span className="line-mask"><span className="line-inner">FOUNDATION.</span></span></h2><span className="script">Always building.</span><Scribble/></div><div className="education-list">{education.map(({title,subtitle,date,label,Icon,description}) => <button className="education-item" key={title} aria-label={`Read about ${title}`} onClick={() => open({ title, eyebrow: label, description, metadata: [{ label: label === 'RECOGNITION' ? 'RECOGNITION' : 'PERIOD', value: date }, { label: label === 'ACADEMIC FOUNDATION' ? 'INSTITUTION' : 'CONTEXT', value: subtitle }] })} data-reveal><Icon className="education-icon" size={36} strokeWidth={1.4}/><span className="education-body"><span className="meta">{label}</span><strong>{title}</strong><span>{subtitle}</span></span><span className="education-date meta">{label !== 'RECOGNITION' && <CalendarDays size={15}/>} {date}</span><ArrowUpRight className="education-arrow" size={24}/></button>)}</div></section>;
+}
